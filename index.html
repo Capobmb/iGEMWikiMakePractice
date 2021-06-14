@@ -1,445 +1,242 @@
 <!DOCTYPE html>
 <html>
-<!-- Retrieved from iGEM wiki 2020:: Template:SDU-Denmark -->
-<!-- ---------------------------------------------------- -->
 
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- 
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+-->
 
-
-<head>
-<title>none</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
-<meta http-equiv="content-type" charset="UTF-8">
-<!-- ↑日本語文字化け対策　削除する？ -->
-<!-- <link rel="icon" href="https://2020.igem.org/wiki/images/7/71/T--SDU-Denmark--Icon.PNG" type="image/png"> -->
-</head>
-
-<script>
-$( document ).ready( function() {
- $('link[rel="shortcut icon"]').attr('href','https://2020.igem.org/wiki/images/7/71/T--SDU-Denmark--Icon.PNG');
-});
-</script>
-
-<style>
-
-/* This line deletes the default layout elements that we don't need */
-#sideMenu, #top, #top_title, .patrollink, #firstHeading,  #home_logo, #sideMenu, #mw-body {display: none}
-
-#bodyContent a[href^="https://"] {
-background: none;
-padding: 0;
-}
-
-#HQ_page h1, h2, h3, h4, h5 {
- font-family: 'Libre Franklin', sans-serif;
- padding: 0%;
-}
-
-#HQ_page h1 {
- font-size: 5em;
-}
-
-#HQ_page h2 {
- font-size: 2rem;
-}
-
-#HQ_page p {
- font-family: 'Montserrat', sans-serif;
- text-align: justify;
- font-size: 1.2rem;
- line-height: 1.9
-}
-
-#globalWrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 0;
-}
-
-#content {
-  width: 100%;
-  border: none;
-  padding: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: normal;
-  position: relative;
-}
-
-.flex-container {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: white;
-}
-
-/* Add a background color to the top navigation */
-.topnav {
-background-color: #2B7780;
-overflow: auto;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-float: left;
-display: block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-font-size: 17px;
-
-}
-
-/* Add an active class to highlight the current page */
-.active {
-background-color: #4CAF50;
-color: white;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-display: none;
-}
-
-/* Dropdown container - needed to position the dropdown content */
-.dropdown {
-float: left;
-overflow: hidden;
-}
-
-/* Style the dropdown button to fit inside the topnav */
-.dropdown .dropbtn {
-font-size: 17px;
-border: none;
-outline: none;
-color: white;
-padding: 14px 16px;
-background-color: inherit;
-font-family: inherit;
-margin: 0;
-}
-
-/* Style the dropdown content (hidden by default) */
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: #f9f9f9;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 11;
-}
-
-/* Style the links inside the dropdown */
-.dropdown-content a {
-float: none;
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-text-align: left;
-}
-
-/* Add a dark background on topnav links and the dropdown button on hover */
-.topnav a:hover, .dropdown:hover .dropbtn {
-background-color: #555;
-color: white;
-}
-
-
-/* Add a grey background to dropdown links on hover */
-.dropdown-content a:hover {
-background-color: #ddd;
-color: black;
-}
-
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
-.dropdown:hover .dropdown-content {
-display: block;
-}
-
-/* When the screen is less than 670 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 670px) {
-.topnav a:not(:first-child), .dropdown .dropbtn {
-  display: none;
-}
-.topnav a.icon {
-  float: right;
-  display: block;
-}
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 670px) {
-.topnav.responsive {position: relative;}
-.topnav.responsive a.icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.topnav.responsive a {
-  float: none;
-  display: block;
-  text-align: left;
-}
-.topnav.responsive .dropdown,   .topnav.responsive .dropdown-HP, .topnav.responsive .dropdown-HW {float: none;}
-.topnav.responsive .dropdown-content {position: relative;}
-.topnav.responsive .dropdown .dropbtn, .topnav.responsive .dropdown-HP .dropbtn-HP, .topnav.responsive .dropdown-HW .dropbtn-HW {
-  display: block;
-  width: 100%;
-  text-align: left;
-}
-} 
-
-
-.bottom_divider {
-text-align: center;
-padding: 30px 0;
-margin: 0;
-box-shadow: 0 1em 1em -1em rgba(0, 0, 0, .25);
-}
-
-.socials-box {
-display: flex;
-align-items: center;
-justify-content: center;
-margin: 2% 0;
-}
-
-.socials-box .fa {
-display: flex;
-width: 80px;
-height: 80px;
-font-size: 40px;
-text-decoration: none;
-color: white;
-align-items: center;
-justify-content: center;
-border-radius: 50%;
-padding: 0 !important;
-margin: 0 2%;
-opacity: 75%;
-}
-
-.socials-box .fa:hover {
-opacity: 100%;
-}
-
-.facebook-icon {
-background: #3b5998 !important;
-}
-
-.instagram-icon {
-background: #d6249f !important;
-background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) !important;
-}
-
-.email-icon {
-background: #2B7780 !important;
-}
-
-.parag1 {
-  margin-top:75px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-}
-
-</style>
-
-<script>
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-var x = document.getElementById("myTopnav");
-if (x.className === "topnav") {
-  x.className += " responsive";
-} else {
-  x.className = "topnav";
-}
-} 
-</script>
-
-<script>
-(function(l){var i,s={touchend:function(){}};for(i in s)l.addEventListener(i,s)})(document); // sticky hover fix in iOS
-</script>
-
-
-<div style="position: fixed; width: 100%; top: 18px; z-index: 10"> 
-<!-- top : 18px ってのはiGEMのバーにくっつくように -->
-<nav class="topnav" id="myTopnav">
-<a style="line-height: normal; padding-left: 25px" href="http://2020.igem.org/Team:SDU-Denmark"><i class="fa fa-home"></i> Home</a>
-<div class="dropdown">
-  <button class="dropbtn"><i class="fa fa-tint"></i> Our Project
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content">
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Description">Description</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Results">Results</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Proof_Of_Concept">Proof of Concept</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Contribution">Contribution</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Sustainable">UN SDGs</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Poster">Poster</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn"><i class="fa fa-users"></i> Our Team
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content">
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Team">Overview</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Partnership">Partnership</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Attributions">Attributions</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Collaborations">Collaborations</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Inclusion">Inclusion</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn"><i class="fa fa-flask"></i> Laboratory
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content">
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Laboratory">Design</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Engineering">Engineering</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Parts">Parts</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Notebook">Notebook</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Experiments">Protocols</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Safety">Safety</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn"><i class="fa fa-graduation-cap"></i> Human Practices
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content">
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Human_Practices">Overview</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Ethics">Ethics</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Interview">Interview</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Education">Science Communication</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Human_Practices/Gamification">Gamification</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Human_Practices/Card_game">Early Detection Game</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Implementation">Proposed Implementation</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn"><i class="fa fa-cogs"></i> Hardware
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content">
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Hardware">Overview</a>
-<a href="http://2020.igem.org/Team:SDU-Denmark/Design">Integrated Design</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Model">Modeling</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Entrepreneurship">Entrepreneurship</a>
-  </div>
-</div>
-
-<div class="dropdown">
-  <button class="dropbtn"><i class="fa fa-video-camera"></i> Videos
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content">
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Promotion">Project Promotion</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Excellence">Music Video</a>
-    <a href="http://2020.igem.org/Team:SDU-Denmark/Presentaion">Final Presentation</a>
-  </div>
-</div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-  <i class="fa fa-bars"></i>
-</a>
-</nav>
-</div>
-
-<!-- ---------------------------------------------------- -->
 <head>
   <title>test</title>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  -->
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-</head>
 
+  <meta http-equiv="content-type" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+
+  <!-- styles +++++++++++++++++++++++++++++++++ -->
+  <style>
+    #main-content-wrapper {
+      position: relative;
+      top: 80px
+    }
+    img {
+      margin: 30px 0px;
+    }
+    body p {
+      line-height: 1.75;
+      /* ??????? */
+    }
+
+    .toppage-contents {
+      font-size:1.3em;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding: 1em 2em;
+      /* border: 2px solid red; */
+      text-align: justify;
+    }
+    .toppage-title{
+      font-size:3em;
+      font-weight:bolder;
+      text-align: center;
+      line-height: 1.25em;
+    }
+    .contents-spacer-20{
+      display:block;
+      height:20px;
+    }
+    hr#footer-divider {
+      margin: 60px 2.5%;
+    }
+    a.sponsor-logo{
+      display:block;
+      float:left;
+      border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      text-decoration: none;
+    }
+
+    /* -------- bootstrap elements ----------- */
+
+    .navbar {
+      /* display: none; */
+      /* これ will later be deleted */
+      margin-bottom: 20px;
+    }
+
+    a.nav-link {
+      color: white !important;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+</head>
 
 <!-- -------------------- -->
 
-
 <body>
-
-  <!--
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-  -->
-  
   <!-- this is nav bar
-
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Kobayu-ku</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-      あ
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExample01">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./zoom.html">Zoom</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  this is additional.
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+    
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Kobayu-ku</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        あ
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarsExample01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./zoom.html">Zoom</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    this is additional.
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
         <a class="navbar-brand" href="#">Bootstrap 5 tutorial</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="#">Blog</a>
             </li>
-        </ul>
-        <form class="d-flex">
+          </ul>
+          <form class="d-flex">
             <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+          </form>
         </div>
+      </div>
+    </nav>
+  -->
+
+  <header>
+    <nav class="navbar navbar-expand navbar-dark fixed-top" style="background-color: rgb(120, 211, 0); opacity: 0.95;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Brand</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+          aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Project</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                <li><a class="dropdown-item" href="./subpage.html">Description(subpage)</a></li>
+                <li><a class="dropdown-item" href="#">Design</a></li>
+                <li><a class="dropdown-item" href="#">other</a></li>
+                <li><a class="dropdown-item" href="#">other</a></li>
+                <li><a class="dropdown-item" href="#">Safety</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Lab</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                <li><a class="dropdown-item" href="#">Experiment</a></li>
+                <li><a class="dropdown-item" href="#">Results</a></li>
+                <li><a class="dropdown-item" href="#">Modeling</a></li>
+                <li><a class="dropdown-item" href="#">Hardware</a></li>
+                <li><a class="dropdown-item" href="#">Demonstration</a></li>
+                <li><a class="dropdown-item" href="#">Future application</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Human
+                Practice</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                <li><a class="dropdown-item" href="#">integrated human practice</a></li>
+                <li><a class="dropdown-item" href="#">other</a></li>
+                <li><a class="dropdown-item" href="#">other</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">People</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                <li><a class="dropdown-item" href="#">Team</a></li>
+                <li><a class="dropdown-item" href="#">Attributions</a></li>
+                <li><a class="dropdown-item" href="#">Collaborations</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main contents +++++++++++++++++++++++++++++++++++++-->
+  <main>
+    <div id="main-content-wrapper">
+      <img src="./images/eyecatch_description.png" alt="image not available">
+
+      <p class="toppage-title">"Looking for teams to collaborate with!"</p>
+      <div class="toppage-contents">
+        <p>Hello! This is team Kyoto from Japan! <br>Our project for this year is Cut Flower Loss.</p>
+        <p>Cut flowers serve us as gifts or decorations in our daily lives, comforting us with their beauty of color  and fragrance. However, during the lives of flowers from field to flower shop to  people’s hands, they are threatened by a number of monsters, such as viral diseases, greedy six-legged pests, and inevitable death of withering. In flower shops, overgrown cut flowers are discarded everyday because shopkeepers cannot control when flowers bloom.</p>
+        <p>Though there already exist specific measures in general use against each of these threats, pesticides against the pests, chemicals containing metal ions, or worse! - all current strategies are environmentally unfriendly and may also be directly harmful to humans.</p>
+        <div class="contents-spacer-20"></div>
+        <p>We set our sights on developing a comprehensive solution based on synthetic biology to defend against this significant loss of cut flowers.</p>
+        <div class="contents-spacer-20"></div>
+        <p>In order to efficiently tackle the problems underlying flower damage problems, we plan to devise an easy virion detection system which utilizes CRISPR-Cas and isothermal PCR. We also aim to wipe out pest damage to flowers , targeting the essential genes of harmful insects with the aid of RNAi delivered through stems of the cut flower. In addition, we are planning a system to fully control the timing of flower blooming, keeping them fresh long after being snipped, by inhibiting the aging system with purified siRNA and a functional NOP-1 peptide. In order to achieve stable and efficient manufacturing of these inhibitor molecules, we also plan to construct a production system in E.coli based on APP (asymmetric plasmid partitioning) and lysis control.</p>
+        <p><span class="">Last but not least, we are looking for iGEM teams that will collaborate with us to exchange opinions about each team’s project, and also work in partnership with us throughout this iGEM year (to fulfill partnership requirements). Please feel free to contact us any time if your team’s project has anything in common with ours.</span></p>
+      </div>
+
     </div>
-  </nav>
-   -->
+  </main>
+
+  <footer>
+    <hr id="footer-divider">
+
+    <a class="sponsor-logo" href="#">*insert sponsors here1</a>
+    <a class="sponsor-logo" href="#">*insert sponsors here2</a>
+    <a class="sponsor-logo" href="#">*insert sponsors here3</a>
+    
+  </footer>
+
+  <!-- Scripts part ++++++++++++++++++++++++++++++++++++++-->
+
   <script src="./js/jquery-3.3.1.slim.min.js"></script>
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
 
-  <p class = "parag1" style="text-align:justify;">
-
-  Hello! This is team Kyoto from Japan! Our project title is Cut Flower Loss. <br>
-  Our project’s goal is to propose comprehensive solution to the losses that cut flower is facing.<br>
-  Cut flower appears in many places of our daily life, but on rearing it or keeping it fresh, people including flower shoppers have some difficulties due to virus infection or aging of flower itself.
-  In order to efficiently tackle the problems, we plan to devise easy detection system utilizing CRISPR-Cas and isothermal PCR.
-  Futhermore, with the aid of RNAi, we also aim to wipe out the pest damage to flowers by targeting essential genes of bugs.
-  In addition, innovative inhibition system against plants’ aging mechanism represented by ethylene aging system, that will keep cut flower fresh even long after being cut.
-  <br>
-  Last but not least, we are looking for iGEM teams that will collaborate with us throughout this project, so please feel free to contact us anytime!
-  </p>
-
+  <!--  -->
 </body>
+
 </html>
